@@ -14,4 +14,4 @@ Welcome to my portfolio. I'm a data-savvy RGM consultant pivoting into analytics
 ## 📫 Contact
 
 - 📧 [christo.wang523@gmail.com]
-- 🌐 [LinkedIn](https://linkedin.com/in/yourname)
+- 🌐 [LinkedIn](https://linkedin.com/in/christo-wang)
