@@ -83,4 +83,3 @@ This will produce:
 
 ---
 
-*Authored by Christo – leveraging math, SQL, and BI tools for actionable pricing insights.*
