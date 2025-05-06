@@ -17,7 +17,7 @@ This repository provides a complete end-to-end Python pipeline to transform raw 
 promo-event-analysis/
 ├── data/                    # Example or synthetic CSV for demo
 │   └── sample_data.csv      # Minimal dataset matching expected schema
-├── notebooks/               # Jupyter notebooks demonstrating each step
+├── notebook/               # Jupyter notebooks demonstrating each step
 │   └── sell_out.ipynb
 ├── src/                     # Reusable modules implementing each pipeline stage
 │   ├── data_loading.py      # Load Excel/CSV, clean column names
@@ -49,20 +49,20 @@ The pipeline requires a tabular file (Excel or CSV) with at least:
 ```bash
 python -m src.cli \
   --input data/sample_data.csv \
-  --output cleaned_sales.xlsx \
-  --events events_summary.xlsx
+  --sample_data_cleaned.xlsx \
+  --sample_data_events.xlsx
 ```
 
 This will produce:
 
-* `cleaned_sales.xlsx`: full week‑level dataset with flags, uplift, baseline columns
-* `events_summary.xlsx`: promo events with duration, depth, buckets, and counts
+* `sample_data_cleaned.xlsx`: full week‑level dataset with flags, uplift, baseline columns
+* `sample_data_events.xlsx`: promo events with duration, depth, buckets, and counts
 
 ### 2️⃣ Within a notebook
 
-1. Open `notebooks/01_pipeline_demo.ipynb` in Jupyter
+1. Open `notebook/sell_out.ipynb` in Jupyter
 2. Set `INPUT_PATH` and `OUTPUT_DIR` variables at the top
-3. Run cells to see intermediate outputs and visualizations
+3. Run cells to see intermediate outputs 
 
 ## 🧩 Key Pipeline Steps
 
