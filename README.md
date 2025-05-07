@@ -17,15 +17,16 @@ This repository provides a complete end-to-end Python pipeline to transform raw 
 promo-event-analysis/
 ├── data/                    # Example or synthetic CSV for demo
 │   └── sample_data.csv      # Minimal dataset matching expected schema
-├── notebook/               # Jupyter notebooks demonstrating each step
-│   └── sell_out.ipynb
+├── notebooks/               # Jupyter notebooks demonstrating each step
+│   └── sell_out.ipynb       # End-to-end demo wiring together your core functions
 ├── src/                     # Reusable modules implementing each pipeline stage
-│   ├── data_loading.py      # Load Excel/CSV, clean column names
-│   ├── baseline.py          # Functions to compute baseline price & volume
-│   ├── promo_flags.py       # Logic for promo week flags and anomaly filtering
-│   ├── event_detection.py   # Event clustering, depth & duration metrics, buckets
-│   └── cli.py               # CLI wrapper for full pipeline run
-└── README.md                # This document
+│   ├── data_loading.py      # 1. Load CSV/Excel, clean column names, parse dates
+│   ├── baseline_price.py    # 2. Compute baseline price (quantile of non-promo price)
+│   ├── baseline_volume.py   # 3. Compute baseline volume (mean non-promo units)
+│   ├── promo_events.py      # 4. Flag promo weeks, filter anomalies, cluster Event_IDs
+│   ├── promo_bins.py        # 5. Compute depth & duration buckets for events
+│   └── cli.py               # CLI wrapper to run full pipeline from terminal
+└── README.md                # This document (with instructions & overview)
 ```
 
 ## 📝 Expected Input Schema
